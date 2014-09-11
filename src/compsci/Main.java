@@ -4,26 +4,22 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import compsci.programs.ProgramList;
+
 public class Main {
 	
 	private static void createAndShowGUI(){
 		JFrame frame = new JFrame("Computer Science Shenanigans");
 		JPanel panel = new JPanel();
-		JButton button001 = new JButton();
-		JButton button002 = new JButton();
+		JButton btn001 = new JButton("TEST");
+		JButton btn002 = new JButton("Button2");
 		ButtonActionListener al = new ButtonActionListener();
 		
-		button001.addActionListener(al.button001action);
-		button002.addActionListener(al.button002action);
+		btn001.addActionListener(al.btn001act);
+		btn002.addActionListener(al.btn001act);
 		
-		button001.setBounds(50, 50, 100, 50);
-		button001.setText("Test");
-		
-		button002.setBounds(150, 150, 100, 50);
-		button002.setText("Button2");
-		
-		panel.add(button001);
-		panel.add(button002);
+		panel.add(btn001);
+		panel.add(btn002);
 		frame.add(panel);
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -32,13 +28,8 @@ public class Main {
 	}
 	
 	public static void main(String args[]){
-		
-		javax.swing.SwingUtilities.invokeLater(new Runnable(){
-			public void run(){
-				createAndShowGUI();
-			}
-		});
-		
+		createAndShowGUI();
+		ProgramList.listPrograms();
 	}
 	
 }

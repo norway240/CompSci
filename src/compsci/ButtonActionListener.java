@@ -6,15 +6,13 @@ import java.awt.event.ActionListener;
 import compsci.programs.test.Tester;
 
 public class ButtonActionListener {
-	ActionListener button001action = new ActionListener(){
-		@SuppressWarnings("static-access")
+	ActionListener btn001act = new ActionListener(){
 		public void actionPerformed(ActionEvent e){
 			System.out.println("Button1");
-			Tester test = new compsci.programs.test.Tester();
-			test.main(null);
+			Tester.main(null);
 		}
 	};
-	ActionListener button002action = new ActionListener(){
+	ActionListener btn002act = new ActionListener(){
 		public void actionPerformed(ActionEvent e){
 			System.out.println("Button2");
 		}
