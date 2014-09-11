@@ -8,17 +8,17 @@ import compsci.programs.ProgramList;
 
 public class Main {
 	
+	public static ButtonActionListener bal = new ButtonActionListener();
+	public static JFrame frame = new JFrame("Computer Science Shenanigans");
+	public static JPanel panel = new JPanel();
+	public static JButton btn001 = new JButton(Consts.BTN001);
+	public static JButton btn002 = new JButton(Consts.BTN002);
+	public static JButton btn003 = new JButton(Consts.BTN003);
+
 	private static void createAndShowGUI(){
-		ButtonActionListener al = new ButtonActionListener();
-		JFrame frame = new JFrame("Computer Science Shenanigans");
-		JPanel panel = new JPanel();
-		JButton btn001 = new JButton(Consts.BTN001);
-		JButton btn002 = new JButton(Consts.BTN002);
-		JButton btn003 = new JButton(Consts.BTN003);
-		
-		btn001.addActionListener(al.btn001act);
-		btn002.addActionListener(al.btn002act);
-		btn003.addActionListener(al.btn003act);
+		btn001.addActionListener(bal.act);
+		btn002.addActionListener(bal.act);
+		btn003.addActionListener(bal.act);
 		
 		panel.add(btn001);
 		panel.add(btn002);

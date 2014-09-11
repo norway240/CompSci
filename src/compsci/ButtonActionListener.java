@@ -8,22 +8,18 @@ import compsci.programs.math.MathShenanigans;
 import compsci.programs.test.Tester;
 
 public class ButtonActionListener {
-	ActionListener btn001act = new ActionListener(){
+	ActionListener act = new ActionListener(){
 		public void actionPerformed(ActionEvent e){
-			System.out.println(Consts.BTN001);
-			Tester.main(null);
-		}
-	};
-	ActionListener btn002act = new ActionListener(){
-		public void actionPerformed(ActionEvent e){
-			System.out.println(Consts.BTN002);
-			MathShenanigans.main(null);
-		}
-	};
-	ActionListener btn003act = new ActionListener(){
-		public void actionPerformed(ActionEvent e){
-			System.out.println(Consts.BTN003);
-			ComputeThis.main(null);
+			if(e.getSource()==Main.btn001){
+				System.out.println(Consts.BTN001);
+				Tester.main(null);
+			}else if(e.getSource()==Main.btn002){
+				System.out.println(Consts.BTN002);
+				MathShenanigans.main(null);
+			}else if(e.getSource()==Main.btn003){
+				System.out.println(Consts.BTN003);
+				ComputeThis.main(null);
+			}
 		}
 	};
 }
