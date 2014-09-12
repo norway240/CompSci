@@ -19,6 +19,8 @@ public class Main {
 	static ButtonActionListener bal = new ButtonActionListener();
 	static JPanel panel = new JPanel(new GridBagLayout());
 	static GridBagConstraints c = new GridBagConstraints();
+	static JTextArea textArea = new JTextArea(10,50);
+	static JButton btnclear = new JButton("Clear");
 	static JButton btn001 = new JButton(Consts.BTN001);
 	static JButton btn002 = new JButton(Consts.BTN002);
 	static JButton btn003 = new JButton(Consts.BTN003);
@@ -36,15 +38,15 @@ public class Main {
 
 	private static void createAndShowGUI(){
 		JFrame frame = new JFrame("Computer Science Shenanigans");
-		JTextArea textArea = new JTextArea(10,50);
 		JScrollPane scroll = new JScrollPane(textArea);
 		@SuppressWarnings("unused")
 		PrintStream standardOut;
-		
-		addSomething(btn001,"button",0,0,1);
-		addSomething(btn002,"button",1,0,1);
-		addSomething(btn003,"button",2,0,1);
-		addSomething(scroll,"scroll",0,1,4);
+
+		addSomething(btnclear,"button",0,0,1);
+		addSomething(btn001,"button",0,1,1);
+		addSomething(btn002,"button",1,1,1);
+		addSomething(btn003,"button",2,1,1);
+		addSomething(scroll,"scroll",0,2,4);
 		
 		frame.add(panel);
 		

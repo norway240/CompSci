@@ -10,7 +10,9 @@ import compsci.programs.test.Tester;
 public class ButtonActionListener {
 	ActionListener act = new ActionListener(){
 		public void actionPerformed(ActionEvent e){
-			if(e.getSource()==Main.btn001){
+			Main.textArea.setText("");
+			if(e.getSource()==Main.btnclear){
+			}else if(e.getSource()==Main.btn001){
 				System.out.println(Consts.BTN001);
 				Tester.main(null);
 			}else if(e.getSource()==Main.btn002){
