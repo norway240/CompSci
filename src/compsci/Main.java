@@ -9,23 +9,24 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import compsci.programs.ProgramList;
-
 public class Main {
 
 	static ButtonActionListener bal = new ButtonActionListener();
 	static JPanel panel = new JPanel(new GridBagLayout());
 	static GridBagConstraints c = new GridBagConstraints();
 	//static JTextArea textArea = new JTextArea(10,50);
-	static JButton btnclear = new JButton("Clear");
-	static JButton btn001 = new JButton(CONSTS.BTN001);
+	//static JButton btnclear = new JButton("Clear");
+	
+	static JButton[] BTN = new JButton[CONSTS.NUMBTNS];
+	
+    /*static JButton btn001 = new JButton(CONSTS.BTN001);
 	static JButton btn002 = new JButton(CONSTS.BTN002);
 	static JButton btn003 = new JButton(CONSTS.BTN003);
 	static JButton btn004 = new JButton(CONSTS.BTN004);
 	static JButton btn005 = new JButton(CONSTS.BTN005);
 	static JButton btn006 = new JButton(CONSTS.BTN006);
 	static JButton btn007 = new JButton(CONSTS.BTN007);
-	static JButton btn008 = new JButton(CONSTS.BTN008);
+	static JButton btn008 = new JButton(CONSTS.BTN008);*/
 	
 	private static void addSomething(Object obj,String type, int x, int y, int width){
 		if(type.equalsIgnoreCase("button")){
@@ -40,19 +41,46 @@ public class Main {
 
 	private static void createAndShowGUI(){
 		JFrame frame = new JFrame("Computer Science Shenanigans");
+		
+		//Set button titles
+		CONSTS.BTNS[0] = "TEST";
+		CONSTS.BTNS[1] = "Results";
+		CONSTS.BTNS[2] = "ComputeThis";
+		CONSTS.BTNS[3] = "MathShenanigans";
+		CONSTS.BTNS[4] = "Circle";
+		CONSTS.BTNS[5] = "Name";
+		CONSTS.BTNS[6] = "EvenOdd";
+		CONSTS.BTNS[7] = "Calculator";
+		CONSTS.BTNS[8] = "Weight";
+		CONSTS.BTNS[9] = "Loops";
+		CONSTS.BTNS[10] = "ReverseName";
+		CONSTS.BTNS[11] = "L12";
+		
+		//Create and add buttons to frame
+		int x=0,y=0;
+		for(int i=0;i<CONSTS.NUMBTNS;i++){
+		    BTN[i] = new JButton(CONSTS.BTNS[i]);
+			addSomething(BTN[i],"button",x,y,1);
+			x++;
+			if(x==5){
+				x=0;
+				y++;
+			}
+		}
+		
 		/*JScrollPane scroll = new JScrollPane(textArea);
 		@SuppressWarnings("unused")
 		PrintStream standardOut;*/
 
 		//addSomething(btnclear,"button",0,0,1);
-		addSomething(btn001,"button",0,0,1);
+		/*addSomething(btn001,"button",0,0,1);
 		addSomething(btn002,"button",1,0,1);
 		addSomething(btn003,"button",2,0,1);
 		addSomething(btn004,"button",3,0,1);
 		addSomething(btn005,"button",0,1,1);
 		addSomething(btn006,"button",1,1,1);
 		addSomething(btn007,"button",2,1,1);
-		addSomething(btn008,"button",3,1,1);
+		addSomething(btn008,"button",3,1,1);*/
 		//addSomething(scroll,"scroll",0,3,4);
 		
 		frame.add(panel);
@@ -71,7 +99,7 @@ public class Main {
 	
 	public static void main(String args[]){
 		createAndShowGUI();
-		ProgramList.listPrograms();
+		//ProgramList.listPrograms();
 	}
 	
 }
