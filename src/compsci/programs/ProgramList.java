@@ -1,6 +1,5 @@
 package compsci.programs;
 
-import compsci.CONSTS;
 
 public class ProgramList {
 	public static void listPrograms(){

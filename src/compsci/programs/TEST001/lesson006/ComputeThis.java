@@ -1,4 +1,4 @@
-package compsci.programs.lesson006;
+package compsci.programs.TEST001.lesson006;
 
 public class ComputeThis {
 	public static void main(String args[]){

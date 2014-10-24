@@ -1,4 +1,4 @@
-package compsci.programs.lesson009;
+package compsci.programs.TEST002.lesson009;
 
 import java.util.Scanner;
 

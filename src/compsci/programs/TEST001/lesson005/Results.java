@@ -1,4 +1,4 @@
-package compsci.programs.lesson005;
+package compsci.programs.TEST001.lesson005;
 
 public class Results {
 	
