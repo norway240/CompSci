@@ -1,4 +1,4 @@
-package compsci.programs.lesson015.bank;
+package compsci.programs.TEST004.bank;
 
 import java.util.Scanner;
 public class Bank{
@@ -16,6 +16,8 @@ public class Bank{
             System.out.println("w, d, g");
             opt = scanner.next();
             
+            System.out.println(opt);
+            
             if(opt == "w"){
                 System.out.print("Ammount to withdraw: ");
                 double with = scanner.nextDouble();
@@ -27,6 +29,8 @@ public class Bank{
             }else if(opt == "g"){
                 double balance = account.getBalance();
                 System.out.println("Balance: "+balance);
+            }else{
+            	System.out.println("Please only choose one of the following:");
             }
         }
         scanner.close();

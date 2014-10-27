@@ -26,8 +26,14 @@ public class Triangle {
 		}while(num3 < num2);
 		scanner.close();
 		System.out.println("Your 3 sides are: "+num1+", "+num2+", "+num3);
-		if((Math.pow(num1, 2)+Math.pow(num2, 2))==Math.pow(num3, 2)){
+		double a2 = Math.pow(num1, 2);
+		double b2 = Math.pow(num2, 2);
+		double c2 = Math.pow(num3, 2);
+		double ab = a2 + b2;
+		if(ab==c2){
 			System.out.println("Right triangle");
+		}else{
+			System.out.println("NO!  These sides do not make a right triangle!");
 		}
 		
 	}

@@ -1,4 +1,4 @@
-package compsci.programs.lesson015.bank;
+package compsci.programs.TEST004.bank;
 
 public class BankAccount{
     
@@ -23,7 +23,11 @@ public class BankAccount{
     }
     
     public double withdraw(double w){
-        return (balance -= w);
+    	if(w > balance){
+        	System.out.println("Sorry. You do not have that much to withdraw.");
+            return (balance -= w);
+        }
+        return w;
     }
     
     public double getBalance(){
