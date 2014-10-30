@@ -7,7 +7,11 @@ public class ButtonActionListener {
 	ActionListener act = new ActionListener(){
 		public void actionPerformed(ActionEvent e){
 			if(e.getSource()==Main.BTN[0]){
-				compsci.programs.test.Tester.main(null);
+				new Thread(new Runnable() {
+				    public void run() {
+						compsci.programs.test.Tester.main(null);
+				    }
+				}).start();
 			}else if(e.getSource()==Main.BTN[1]){
 				System.out.println(Main.BTN[1].getText());
 				compsci.programs.TEST001.lesson005.Results.main(null);
@@ -53,6 +57,27 @@ public class ButtonActionListener {
 			}else if(e.getSource()==Main.BTN[15]){
 				System.out.println(Main.BTN[15].getText());
 				compsci.programs.TEST003.lesson014.TableOfBases.main(null);
+			}else if(e.getSource()==Main.BTN[16]){
+				System.out.println(Main.BTN[16].getText());
+				new Thread(new Runnable() {
+				    public void run() {
+						compsci.programs.TEST004.bank.Bank.main(null);
+				    }
+				}).start();
+			}else if(e.getSource()==Main.BTN[17]){
+				System.out.println(Main.BTN[17].getText());
+				new Thread(new Runnable() {
+				    public void run() {
+						compsci.programs.TEST004.calculator.Calc.main(null);
+				    }
+				}).start();
+			}else if(e.getSource()==Main.BTN[18]){
+				System.out.println(Main.BTN[18].getText());
+				new Thread(new Runnable() {
+				    public void run() {
+						compsci.programs.TEST004.factors.Factors.main(null);
+				    }
+				}).start();
 			}
 		}
 	};

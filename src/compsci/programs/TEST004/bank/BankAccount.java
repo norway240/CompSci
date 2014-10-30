@@ -25,9 +25,9 @@ public class BankAccount{
     public double withdraw(double w){
     	if(w > balance){
         	System.out.println("Sorry. You do not have that much to withdraw.");
-            return (balance -= w);
+            return w;
         }
-        return w;
+        return (balance -= w);
     }
     
     public double getBalance(){

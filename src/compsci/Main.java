@@ -35,6 +35,9 @@ public class Main {
 		
 		//Set button titles
 		CONSTS.BTNS[0] = "TEST";
+		/*
+		 * TEST001
+		 */
 		//L005
 		CONSTS.BTNS[1] = "Results";
 		//L006
@@ -45,6 +48,9 @@ public class Main {
 		CONSTS.BTNS[5] = "Name";
 		//L009
 		CONSTS.BTNS[6] = "EvenOdd";
+		/*
+		 * TEST002
+		 */
 		//L010
 		CONSTS.BTNS[7] = "Calculator";
 		CONSTS.BTNS[8] = "Weight";
@@ -56,8 +62,17 @@ public class Main {
 		CONSTS.BTNS[12] = "Age";
 		CONSTS.BTNS[13] = "Count";
 		CONSTS.BTNS[14] = "Triangle";
+		/*
+		 * TEST003
+		 */
 		//L014
 		CONSTS.BTNS[15] = "TableOfBases";
+		/*
+		 * TEST004
+		 */
+		CONSTS.BTNS[16] = "Bank Account";
+		CONSTS.BTNS[17] = "Calc Functions";
+		CONSTS.BTNS[18] = "Factor Gen";
 		
 		//Create and add buttons to frame
 		int x=0,y=0;
