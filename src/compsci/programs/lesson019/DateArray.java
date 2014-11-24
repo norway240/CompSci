@@ -2,25 +2,20 @@ package compsci.programs.lesson019;
 
 public class DateArray {
 
-	public static void main(String[] args) {
+	public static void main(String args[]) {
 		String[] months = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
 		String[] m1 = new String[6];
 		String[] m2 = new String[6];
 		
-		for(int i=0; i<months.length; i++){
-			if(i<6){
-				m1[i] = months[i];
-			}else{
-				m2[i-6] = months[i];
-			}
+		System.arraycopy(months, 0, m1, 0, 6);
+		System.arraycopy(months, 6, m2, 0, 6);
+		
+		for(String i: m1){
+			System.out.println(i);
 		}
 		
-		for(int i=0; i<m1.length; i++){
-			System.out.println(m1[i]);
-		}
-		
-		for(int i=0; i<m2.length; i++){
-			System.out.println(m2[i]);
+		for(String i: m2){
+			System.out.println(i);
 		}
 		
 	}
