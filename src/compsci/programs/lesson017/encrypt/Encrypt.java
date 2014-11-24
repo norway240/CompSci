@@ -1,4 +1,4 @@
-package compsci.programs.encrypt;
+package compsci.programs.lesson017.encrypt;
 
 public class Encrypt {
 	
