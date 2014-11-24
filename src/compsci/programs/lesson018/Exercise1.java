@@ -9,29 +9,30 @@ public class Exercise1 {
 		String s = scanner.nextLine();
 		scanner.close();
 		
-		int[] ar = new int[10];
+		int ar[] = new int[10];
 		int i = 0;
 		Scanner sc = new Scanner(s);
 		while(sc.hasNext()){
 			ar[i] = sc.nextInt();
-			System.out.println(ar[i]);
+			//System.out.println(ar[i]);
 			i++;
 		}
 		sc.close();
 		
-		int sum = 0;
-		String st = "";
+		int sum = ar[0];
+		String st = ""+ar[0];
 		boolean p = true;
-		for(i=0; i<ar.length; i++){
-			st += ar[i];
-			if(p){
-				sum += ar[i];
-				st += " + ";
-			}else{
-				sum -= ar[i];
-				st += " - ";
+		for(i=1; i<ar.length; i++){
+			if (!(ar[i]==0)){
+				if(p){
+					sum += ar[i];
+					st += " + " + ar[i];
+				}else{
+					sum -= ar[i];
+					st += " - " + ar[i];
+				}
+				p = !p;
 			}
-			p = !p;
 		}
 		
 		System.out.println(st + " = " + sum);

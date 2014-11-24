@@ -1,5 +1,6 @@
 package compsci.programs.lesson019;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class NameArray {
@@ -15,6 +16,9 @@ public class NameArray {
 		for(char i: chars){
 			System.out.println(i);
 		}
+		
+		int i = Arrays.binarySearch(chars, 'r');
+		System.out.println(i);
 
 	}
 
