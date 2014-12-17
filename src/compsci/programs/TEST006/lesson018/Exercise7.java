@@ -1,4 +1,4 @@
-package compsci.programs.lesson018;
+package compsci.programs.TEST006.lesson018;
 
 public class Exercise7 {
 
